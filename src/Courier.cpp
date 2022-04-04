@@ -4,41 +4,32 @@ Courier::Courier() {
 
 }
 
-Courier::Courier(string licensePlate, double maxVolume, double maxWeight, double deliveryCost) {
-    this->licensePlate = licensePlate;
+Courier::Courier(int maxVolume, int maxWeight, int deliveryCost) {
     this->maxVolume = maxVolume;
     this->maxWeight = maxWeight;
     this->deliveryCost = deliveryCost;
 }
 
-string Courier::getLicensePlate() const {
-    return this->licensePlate;
-}
-
-void Courier::setLicensePlate(const string licensePlate) {
-    this->licensePlate = licensePlate;
-}
-
-double Courier::getMaxVolume() const {
+int Courier::getMaxVolume() const {
     return this->maxVolume;
 }
 
-void Courier::setMaxVolume(const double maxVolume) {
+void Courier::setMaxVolume(const int maxVolume) {
     this->maxVolume = maxVolume;
 }
 
-double Courier::getMaxWeight() const {
+int Courier::getMaxWeight() const {
     return this->maxWeight;
 }
 
-void Courier::setMaxWeight(const double maxWeight) {
+void Courier::setMaxWeight(const int maxWeight) {
     this->maxWeight = maxWeight;
 }
 
-double Courier::getDeliveryCost() const {
+int Courier::getDeliveryCost() const {
     return this->deliveryCost;
 }
 
-void Courier::setDeliveryCost(const double deliveryCost) {
+void Courier::setDeliveryCost(const int deliveryCost) {
     this->deliveryCost = deliveryCost;
 }

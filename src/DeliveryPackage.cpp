@@ -4,44 +4,35 @@ DeliveryPackage::DeliveryPackage() {
 
 }
 
-DeliveryPackage::DeliveryPackage(string type, double packageWeight, double packageVolume, double value,
+DeliveryPackage::DeliveryPackage(int packageWeight, int packageVolume, int value,
                                  int deliveryTime) {
-    this->type = type;
     this->packageWeight = packageWeight;
     this->packageVolume = packageVolume;
     this->value = value;
     this->deliveryTime = deliveryTime;
 }
 
-string DeliveryPackage::getType() const {
-    return this->type;
-}
-
-void DeliveryPackage::setType(const string type) {
-    this->type = type;
-}
-
-double DeliveryPackage::getPackageWeight() const {
+int DeliveryPackage::getPackageWeight() const {
     return this->packageWeight;
 }
 
-void DeliveryPackage::setPackageWeight(const double packageWeight) {
+void DeliveryPackage::setPackageWeight(const int packageWeight) {
     this->packageWeight = packageWeight;
 }
 
-double DeliveryPackage::getPackageVolume() const {
+int DeliveryPackage::getPackageVolume() const {
     return this->packageVolume;
 }
 
-void DeliveryPackage::setPackageVolume(const double packageVolume) {
+void DeliveryPackage::setPackageVolume(const int packageVolume) {
     this->packageVolume = packageVolume;
 }
 
-double DeliveryPackage::getValue() const {
+int DeliveryPackage::getValue() const {
     return this->value;
 }
 
-void DeliveryPackage::setValue(const double packageValue) {
+void DeliveryPackage::setValue(const int value) {
     this->value = value;
 }
 

@@ -7,27 +7,23 @@ using namespace std;
 
 class DeliveryPackage {
 private:
-    string type;
-    double packageWeight;
-    double packageVolume;
-    double value;
+    int packageWeight;
+    int packageVolume;
+    int value;
     int deliveryTime;
 
 public:
     DeliveryPackage();
-    DeliveryPackage(string type, double packageWeight, double packageVolume, double value, int deliveryTime);
+    DeliveryPackage(int packageWeight, int packageVolume, int value, int deliveryTime);
 
-    string getType() const;
-    void setType(const string type);
+    int getPackageWeight() const;
+    void setPackageWeight(const int packageWeight);
 
-    double getPackageWeight() const;
-    void setPackageWeight(const double packageWeight);
+    int getPackageVolume() const;
+    void setPackageVolume(const int packageVolume);
 
-    double getPackageVolume() const;
-    void setPackageVolume(const double packageVolume);
-
-    double getValue() const;
-    void setValue(const double value);
+    int getValue() const;
+    void setValue(const int value);
 
     int getDeliveryTime() const;
     void setDeliveryTime(const int deliveryTime);

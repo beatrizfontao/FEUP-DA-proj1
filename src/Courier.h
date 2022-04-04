@@ -7,26 +7,22 @@ using namespace std;
 
 class Courier {
 private:
-    string licensePlate;
-    double maxVolume;
-    double maxWeight;
-    double deliveryCost;
+    int maxVolume;
+    int maxWeight;
+    int deliveryCost;
 
 public:
     Courier();
-    Courier(string licensePlate, double maxVolume, double maxWeight, double deliveryCost);
+    Courier(int maxVolume, int maxWeight, int deliveryCost);
 
-    string getLicensePlate() const;
-    void setLicensePlate(const string licensePlate);
+    int getMaxVolume() const;
+    void setMaxVolume(const int maxVolume);
 
-    double getMaxVolume() const;
-    void setMaxVolume(const double maxVolume);
+    int getMaxWeight() const;
+    void setMaxWeight(const int maxWeight);
 
-    double getMaxWeight() const;
-    void setMaxWeight(const double maxWeight);
-
-    double getDeliveryCost() const;
-    void setDeliveryCost(const double deliveryCost);
+    int getDeliveryCost() const;
+    void setDeliveryCost(const int deliveryCost);
 };
 
 
