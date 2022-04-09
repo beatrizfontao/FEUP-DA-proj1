@@ -3,4 +3,4 @@ project(proj1)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(proj1 main.cpp src/DeliveryPackage.cpp src/DeliveryPackage.h src/Courier.cpp src/Courier.h)
+add_executable(proj1 main.cpp src/DeliveryPackage.cpp src/DeliveryPackage.h src/DeliveryVan.cpp src/DeliveryVan.h src/problem1.h src/problem1.cpp)

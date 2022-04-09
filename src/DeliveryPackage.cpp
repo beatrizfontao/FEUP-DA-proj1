@@ -43,3 +43,13 @@ int DeliveryPackage::getDeliveryTime() const {
 void DeliveryPackage::setDeliveryTime(const int deliveryTime) {
     this->deliveryTime = deliveryTime;
 }
+
+bool DeliveryPackage::operator<(const DeliveryPackage& deliveryPackage) const{
+    return (this->packageVolume <= deliveryPackage.getPackageVolume() && this->packageWeight <= deliveryPackage.getPackageWeight());
+}
+
+bool DeliveryPackage::operator==(const DeliveryPackage& deliveryPackage) const{
+    return (this->packageWeight == deliveryPackage.getPackageWeight() && this->packageVolume == deliveryPackage.getPackageVolume()
+            && this->deliveryTime == deliveryPackage.getDeliveryTime() && this->value == deliveryPackage.getValue());
+}
+

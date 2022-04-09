@@ -27,6 +27,10 @@ public:
 
     int getDeliveryTime() const;
     void setDeliveryTime(const int deliveryTime);
+
+    bool operator <(const DeliveryPackage& deliveryPackage) const;
+    bool operator==(const DeliveryPackage& deliveryPackage) const;
+    //DeliveryPackage operator =() const;
 };
 
 

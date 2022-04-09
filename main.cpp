@@ -1,15 +1,16 @@
 #include <iostream>
 #include <vector>
 #include <fstream>
-#include "src\Courier.h"
+#include "src\DeliveryVan.h"
 #include "src\DeliveryPackage.h"
+#include "src\problem1.h"
 
 using namespace std;
 
-vector<Courier> readCourier(string filename){
-    vector<Courier> res = {};
+vector<DeliveryVan> readDeliveryVan(string filename){
+    vector<DeliveryVan> res = {};
     ifstream ifile(filename);
-    Courier c;
+    DeliveryVan c;
     string aux;
     int volMax, pesoMax, custo;
     if(ifile.is_open()){
@@ -34,13 +35,11 @@ vector<DeliveryPackage> readDeliveryPackage(string filename){
     ifstream ifile(filename);
     DeliveryPackage d;
     string aux;
-    int cnt = 1;
     int volume, peso, recompensa, duracao;
     if(ifile.is_open()){
         ifile >> aux >> aux >> aux >> aux;
         while(!ifile.eof()){
             ifile >> volume >> peso >> recompensa >> duracao;
-            cout << "Value = " << recompensa << endl;
             d.setPackageVolume(volume);
             d.setPackageWeight(peso);
             d.setValue(recompensa);
@@ -57,22 +56,38 @@ vector<DeliveryPackage> readDeliveryPackage(string filename){
 
 
 int main() {
-    vector<Courier> c = readCourier("carrinhas.txt");
-    vector<DeliveryPackage> d = readDeliveryPackage("encomendas.txt");
+    vector<DeliveryVan> deliveryVans = readDeliveryVan("carrinhas.txt");
+    vector<DeliveryPackage> deliveryPackages = readDeliveryPackage("encomendas.txt");
+    /*
     cout << "CARRINHAS" << endl;
-    for(int i = 0; i < c.size(); i++){
-        cout << "VOLMAX : " << c[i].getMaxVolume() << endl;
-        cout << "PESOMAX : " << c[i].getMaxWeight() << endl;
-        cout << "CUSTO : " << c[i].getDeliveryCost() << endl;
+    for(int i = 0; i < deliveryVans.size(); i++){
+        cout << "VOLMAX : " << deliveryVans[i].getMaxVolume() << endl;
+        cout << "PESOMAX : " << deliveryVans[i].getMaxWeight() << endl;
+        cout << "CUSTO : " << deliveryVans[i].getDeliveryCost() << endl;
         cout << "\n----------------------------------\n" ;
     }
     cout << '\n' << "ENCOMENDAS" << endl;
-    for(int i = 0; i < d.size(); i++){
-        cout << "VOLUME : " << d[i].getPackageVolume() << endl;
-        cout << "PESO : " << d[i].getPackageWeight() << endl;
-        cout << "RECOMPENSA : " << d[i].getValue() << endl;
-        cout << "DURAÇÃO : " << d[i].getDeliveryTime() << endl;
+    for(int i = 0; i < deliveryPackages.size(); i++){
+        cout << "VOLUME : " << deliveryPackages[i].getPackageVolume() << endl;
+        cout << "PESO : " << deliveryPackages[i].getPackageWeight() << endl;
+        cout << "RECOMPENSA : " << deliveryPackages[i].getValue() << endl;
+        cout << "DURAÇÃO : " << deliveryPackages[i].getDeliveryTime() << endl;
         cout << "\n----------------------------------\n" ;
     }
+     */
+    /**-----------------------------PROBLEM 1-----------------------------**/
+
+    vector<DeliveryVan> deliveryVanMinimized = deliveryVanMinimization(deliveryVans, deliveryPackages);
+    /*
+    cout << "-----------------------------PROBLEM 1-----------------------------" << endl << endl;
+    cout << "MINIMIZATION OF VANS:" << endl;
+
+    for(auto van : deliveryVanMinimized){
+        cout << "Weight : " << van.getMaxWeight() << endl;
+        cout << "Volume : " << van.getMaxVolume() << endl;
+        cout << "Cost : " << van.getDeliveryCost() << endl;
+        cout << "-----------------------------------------" << endl;
+    }
+*/
     return 0;
 }

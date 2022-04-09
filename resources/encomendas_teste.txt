@@ -1,0 +1,5 @@
+volume peso recompensa duração(s)
+1 1 1 1
+1 1 1 1
+1 1 1 1
+1 1 1 1

@@ -73,8 +73,14 @@ build CMakeFiles/proj1.dir/src/DeliveryPackage.cpp.obj: CXX_COMPILER__proj1_Debu
   OBJECT_DIR = CMakeFiles\proj1.dir
   OBJECT_FILE_DIR = CMakeFiles\proj1.dir\src
 
-build CMakeFiles/proj1.dir/src/Courier.cpp.obj: CXX_COMPILER__proj1_Debug C$:/Users/Beatriz$ Fontão/Desktop/FEUP/2_ano/DA/FEUP-DA-proj1/src/Courier.cpp || cmake_object_order_depends_target_proj1
-  DEP_FILE = CMakeFiles\proj1.dir\src\Courier.cpp.obj.d
+build CMakeFiles/proj1.dir/src/DeliveryVan.cpp.obj: CXX_COMPILER__proj1_Debug C$:/Users/Beatriz$ Fontão/Desktop/FEUP/2_ano/DA/FEUP-DA-proj1/src/DeliveryVan.cpp || cmake_object_order_depends_target_proj1
+  DEP_FILE = CMakeFiles\proj1.dir\src\DeliveryVan.cpp.obj.d
+  FLAGS = -g -std=gnu++14
+  OBJECT_DIR = CMakeFiles\proj1.dir
+  OBJECT_FILE_DIR = CMakeFiles\proj1.dir\src
+
+build CMakeFiles/proj1.dir/src/problem1.cpp.obj: CXX_COMPILER__proj1_Debug C$:/Users/Beatriz$ Fontão/Desktop/FEUP/2_ano/DA/FEUP-DA-proj1/src/problem1.cpp || cmake_object_order_depends_target_proj1
+  DEP_FILE = CMakeFiles\proj1.dir\src\problem1.cpp.obj.d
   FLAGS = -g -std=gnu++14
   OBJECT_DIR = CMakeFiles\proj1.dir
   OBJECT_FILE_DIR = CMakeFiles\proj1.dir\src
@@ -87,7 +93,7 @@ build CMakeFiles/proj1.dir/src/Courier.cpp.obj: CXX_COMPILER__proj1_Debug C$:/Us
 #############################################
 # Link the executable proj1.exe
 
-build proj1.exe: CXX_EXECUTABLE_LINKER__proj1_Debug CMakeFiles/proj1.dir/main.cpp.obj CMakeFiles/proj1.dir/src/DeliveryPackage.cpp.obj CMakeFiles/proj1.dir/src/Courier.cpp.obj
+build proj1.exe: CXX_EXECUTABLE_LINKER__proj1_Debug CMakeFiles/proj1.dir/main.cpp.obj CMakeFiles/proj1.dir/src/DeliveryPackage.cpp.obj CMakeFiles/proj1.dir/src/DeliveryVan.cpp.obj CMakeFiles/proj1.dir/src/problem1.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\proj1.dir
