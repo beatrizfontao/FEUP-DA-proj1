@@ -5,7 +5,7 @@ DeliveryPackage::DeliveryPackage() {
 }
 
 DeliveryPackage::DeliveryPackage(int packageWeight, int packageVolume, int value,
-                                 int deliveryTime) {
+                                 int deliveryTime, bool used = false) {
     this->packageWeight = packageWeight;
     this->packageVolume = packageVolume;
     this->value = value;
@@ -42,4 +42,10 @@ int DeliveryPackage::getDeliveryTime() const {
 
 void DeliveryPackage::setDeliveryTime(const int deliveryTime) {
     this->deliveryTime = deliveryTime;
+}
+
+bool DeliveryPackage::operator<(const DeliveryPackage& deliveryPackage) const{
+    if(this->value < deliveryPackage.getValue())
+        return true;
+    return (this->packageVolume < deliveryPackage.getPackageVolume() && this->packageWeight < deliveryPackage.getPackageWeight());
 }

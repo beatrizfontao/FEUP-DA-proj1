@@ -1,15 +1,16 @@
 #include <iostream>
 #include <vector>
 #include <fstream>
-#include "src\Courier.h"
+#include "src\DeliveryVan.h"
 #include "src\DeliveryPackage.h"
+#include "src\problem2.h"
 
 using namespace std;
 
-vector<Courier> readCourier(string filename){
-    vector<Courier> res = {};
+vector<DeliveryVan> readCourier(string filename){
+    vector<DeliveryVan> res = {};
     ifstream ifile(filename);
-    Courier c;
+    DeliveryVan c;
     string aux;
     int volMax, pesoMax, custo;
     if(ifile.is_open()){
@@ -40,7 +41,7 @@ vector<DeliveryPackage> readDeliveryPackage(string filename){
         ifile >> aux >> aux >> aux >> aux;
         while(!ifile.eof()){
             ifile >> volume >> peso >> recompensa >> duracao;
-            cout << "Value = " << recompensa << endl;
+            //cout << "Value = " << recompensa << endl;
             d.setPackageVolume(volume);
             d.setPackageWeight(peso);
             d.setValue(recompensa);
@@ -57,8 +58,9 @@ vector<DeliveryPackage> readDeliveryPackage(string filename){
 
 
 int main() {
-    vector<Courier> c = readCourier("carrinhas.txt");
+    vector<DeliveryVan> c = readCourier("carrinhas.txt");
     vector<DeliveryPackage> d = readDeliveryPackage("encomendas.txt");
+    /*
     cout << "CARRINHAS" << endl;
     for(int i = 0; i < c.size(); i++){
         cout << "VOLMAX : " << c[i].getMaxVolume() << endl;
@@ -74,5 +76,8 @@ int main() {
         cout << "DURAÇÃO : " << d[i].getDeliveryTime() << endl;
         cout << "\n----------------------------------\n" ;
     }
+*/
+    preparation(c,d);
+
     return 0;
 }
