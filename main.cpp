@@ -78,7 +78,9 @@ int main() {
     /**-----------------------------PROBLEM 1-----------------------------**/
 
     vector<DeliveryVan> deliveryVanMinimized = deliveryVanMinimization(deliveryVans, deliveryPackages);
-    /*
+
+    int totalCost = 0;
+
     cout << "-----------------------------PROBLEM 1-----------------------------" << endl << endl;
     cout << "MINIMIZATION OF VANS:" << endl;
 
@@ -87,7 +89,11 @@ int main() {
         cout << "Volume : " << van.getMaxVolume() << endl;
         cout << "Cost : " << van.getDeliveryCost() << endl;
         cout << "-----------------------------------------" << endl;
+        totalCost += van.getDeliveryCost();
     }
-*/
+
+    cout << "Number of delivery vans needed : " << deliveryVanMinimized.size() << endl << endl;
+    cout << "Total cost : " << totalCost << endl << endl;
+
     return 0;
 }

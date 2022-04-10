@@ -58,20 +58,34 @@ vector<DeliveryVan> distributePackages(const vector<DeliveryVan> &vans, const ve
     }
 
     for (auto package: packages) {
+        /*
+        cout << "encomenda to be placed: " << endl;
+        cout << "VOLUME : " << package.getPackageVolume() << endl;
+        cout << "PESO : " << package.getPackageWeight() << endl << endl;
+         */
         for (size_t i = 0; i < auxVans.size(); i++) {
-            if (auxVans[i].first > package.getPackageWeight() && auxVans[i].second > package.getPackageVolume()) {
+            if (auxVans[i].first >= package.getPackageWeight() && auxVans[i].second >= package.getPackageVolume()) {
+
                 // if the package can fit inside the van then we decrease the respective values by the weight and volume of the package
                 if (find(res.begin(), res.end(), vans[i]) == res.end()) {
                     res.push_back(vans[i]); // if the DeliveryVan is not found then we add it to the res vector
+                    /*
+                    cout << "carrinha : " << endl;
                     cout << "VOLMAX : " << vans[i].getMaxVolume() << endl;
                     cout << "PESOMAX : " << vans[i].getMaxWeight() << endl;
                     cout << endl;
+                     */
                 }
                 auxVans[i].first -= package.getPackageWeight();
                 auxVans[i].second -= package.getPackageVolume();
+                /*
                 cout << "encomenda : " << endl;
-                cout << "VOLUME : " << deliveryPackages[i].getPackageVolume() << endl;
-                cout << "PESO : " << deliveryPackages[i].getPackageWeight() << endl << endl;
+                cout << "VOLUME : " << package.getPackageVolume() << endl;
+                cout << "PESO : " << package.getPackageWeight() << endl << endl;
+                cout << "remaining space : "<< endl;
+                cout << "VOL : " << auxVans[i].second << endl;
+                cout << "PESO : " << auxVans[i].first << endl << endl;
+                 */
                 break;
             }
         }
