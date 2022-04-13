@@ -45,9 +45,9 @@ void DeliveryPackage::setDeliveryTime(const int deliveryTime) {
 }
 
 bool DeliveryPackage::operator<(const DeliveryPackage& deliveryPackage) const{
-    return (this->packageVolume <= deliveryPackage.getPackageVolume() && this->packageWeight <= deliveryPackage.getPackageWeight());
+    return (this->packageVolume < deliveryPackage.getPackageVolume() && this->packageWeight < deliveryPackage.getPackageWeight());
 }
-
+//    && this->packageVolume-this->packageWeight <= deliveryPackage.getPackageVolume() - deliveryPackage.getPackageWeight()
 bool DeliveryPackage::operator==(const DeliveryPackage& deliveryPackage) const{
     return (this->packageWeight == deliveryPackage.getPackageWeight() && this->packageVolume == deliveryPackage.getPackageVolume()
             && this->deliveryTime == deliveryPackage.getDeliveryTime() && this->value == deliveryPackage.getValue());

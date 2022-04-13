@@ -37,6 +37,7 @@ void DeliveryVan::setDeliveryCost(const int deliveryCost) {
 bool DeliveryVan::operator>(const DeliveryVan& deliveryVan) const{
     return (this->maxWeight > deliveryVan.getMaxWeight() && this->maxVolume > deliveryVan.getMaxVolume());
 }
+//    && this->maxVolume-this->maxWeight >= deliveryVan.getMaxVolume() - deliveryVan.getMaxWeight()
 
 bool DeliveryVan::operator==(const DeliveryVan& deliveryVan) const{
     return (this->maxWeight == deliveryVan.getMaxWeight() && this->maxVolume == deliveryVan.getMaxVolume() && this->deliveryCost == deliveryVan.getDeliveryCost());

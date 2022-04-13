@@ -58,7 +58,7 @@ vector<DeliveryPackage> readDeliveryPackage(string filename){
 int main() {
     vector<DeliveryVan> deliveryVans = readDeliveryVan("carrinhas.txt");
     vector<DeliveryPackage> deliveryPackages = readDeliveryPackage("encomendas.txt");
-    /*
+/*
     cout << "CARRINHAS" << endl;
     for(int i = 0; i < deliveryVans.size(); i++){
         cout << "VOLMAX : " << deliveryVans[i].getMaxVolume() << endl;
@@ -74,8 +74,10 @@ int main() {
         cout << "DURAÇÃO : " << deliveryPackages[i].getDeliveryTime() << endl;
         cout << "\n----------------------------------\n" ;
     }
-     */
+*/
     /**-----------------------------PROBLEM 1-----------------------------**/
+
+    cout << "zzz" << endl;
 
     vector<DeliveryVan> deliveryVanMinimized = deliveryVanMinimization(deliveryVans, deliveryPackages);
 

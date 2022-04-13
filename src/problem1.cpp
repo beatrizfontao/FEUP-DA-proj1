@@ -11,11 +11,29 @@ void bubbleSort(vector<DeliveryPackage> &vect) {
 }
 
 vector<DeliveryVan> deliveryVanMinimization(const vector<DeliveryVan> &vans, const vector<DeliveryPackage> &packages) {
+    cout << "DM" << endl;
     vector<DeliveryVan> deliveryVans = vans, res;
     vector<DeliveryPackage> deliveryPackages = packages;
     sort(deliveryVans.begin(), deliveryVans.end(), greater<>()); // sorting the vans (decrease)
+/*
+    cout << "organized vans : " << endl;
+    for (auto v: deliveryVans) {
+        cout << "VOLMAX : " << v.getMaxVolume() << endl;
+        cout << "PESOMAX : " << v.getMaxWeight() << endl << endl;
+    }
+    cout << endl;
+    */
+    //sort(deliveryPackages.begin(), deliveryPackages.end());
     bubbleSort(deliveryPackages); // sorting the packages (increase)
     /*
+    cout << "organized packages : " << endl;
+
+    for (auto p: deliveryPackages) {
+        cout << "VOLUME : " << p.getPackageVolume() << endl;
+        cout << "PESO : " << p.getPackageWeight() << endl << endl;
+    }
+    cout << endl;
+
     cout << "organized vans : " << endl;
     for(auto v : deliveryVans){
         cout << "VOLMAX : " << v.getMaxVolume() << endl;
@@ -23,33 +41,10 @@ vector<DeliveryVan> deliveryVanMinimization(const vector<DeliveryVan> &vans, con
     }
     cout << endl;
      */
+    //return res;
+    //return distributePackages(deliveryVans, deliveryPackages, res);
     return distributePackages(deliveryVans, deliveryPackages);
 }
-
-/*
-vector<DeliveryVan> distributePackages(vector<DeliveryVan> &vans, vector<DeliveryPackage> &deliveryPackages, vector<DeliveryVan> &result){
-    if(vans.empty() || deliveryPackages.empty())
-        return result;
-    bool full = false;
-    for(size_t i = 0; i < deliveryPackages.size(); i++) {
-        if(full)
-            distributePackages(vans, deliveryPackages, result);
-        if (vans[0].getMaxVolume() >= deliveryPackages[i].getPackageVolume() &&
-            vans[0].getMaxWeight() >= deliveryPackages[i].getPackageWeight()) {
-            vans[0].setMaxVolume(vans[0].getMaxVolume() - deliveryPackages[i].getPackageVolume());
-            vans[0].setMaxWeight(vans[0].getMaxWeight() - deliveryPackages[i].getPackageWeight());
-            deliveryPackages.erase(deliveryPackages.begin() + i);
-            if (find(result.begin(), result.end(), vans[i]) == result.end()) {
-                result.push_back(vans[i]); // if the DeliveryVan is not found then we add it to the res vector
-            }
-        }
-        if(i == deliveryPackages.size()-1) {
-            full = true;
-            vans.erase(vans.begin());
-        }
-    }
-}
-*/
 
 vector<DeliveryVan> distributePackages(vector<DeliveryVan> &vans, vector<DeliveryPackage> &deliveryPackages) {
     vector<DeliveryPackage> packages = deliveryPackages;
@@ -75,6 +70,96 @@ vector<DeliveryVan> distributePackages(vector<DeliveryVan> &vans, vector<Deliver
     }
     return res;
 }
+
+/*
+vector<DeliveryVan>
+distributePackages(vector<DeliveryVan> &vans, vector<DeliveryPackage> &deliveryPackages, vector<DeliveryVan> &result) {
+    //cout << "DP" << endl;
+    if (deliveryPackages.empty() || vans.empty())
+        return result;
+    if(vans[0])
+}
+
+vector<DeliveryVan>
+distributePackages(vector<DeliveryVan> &vans, vector<DeliveryPackage> &deliveryPackages, vector<DeliveryVan> &result) {
+    cout << "DP" << endl;
+    if (vans.empty() || deliveryPackages.empty())
+        return result;
+    bool full = false;
+    cout << "Inicial : " << endl;
+    cout << "VOLMAX : " << vans[0].getMaxVolume() << endl;
+    cout << "PESOMAX : " << vans[0].getMaxWeight() << endl << endl;
+    for (size_t i = 0; i < deliveryPackages.size(); i++) {
+        cout << "Encomenda : " << endl;
+        cout << "VOLUME : " << deliveryPackages[i].getPackageVolume() << endl;
+        cout << "PESO : " << deliveryPackages[i].getPackageWeight() << endl << endl;
+        cout << "Atual : " << endl;
+        cout << "VOLMAX : " << vans[0].getMaxVolume() << endl;
+        cout << "PESOMAX : " << vans[0].getMaxWeight() << endl << endl;
+        if (full) {
+            cout << "full" << endl;
+            distributePackages(vans, deliveryPackages, result);
+        }
+        if (vans[0].getMaxVolume() >= deliveryPackages[i].getPackageVolume() &&
+            vans[0].getMaxWeight() >= deliveryPackages[i].getPackageWeight()) {
+            cout << "if" << endl;
+            vans[0].setMaxVolume(vans[0].getMaxVolume() - deliveryPackages[i].getPackageVolume());
+            vans[0].setMaxWeight(vans[0].getMaxWeight() - deliveryPackages[i].getPackageWeight());
+            deliveryPackages.erase(deliveryPackages.begin() + i);
+            if (find(result.begin(), result.end(), vans[0]) == result.end()) {
+                result.push_back(vans[i]); // if the DeliveryVan is not found then we add it to the res vector
+            }
+        } else {
+            cout << "full" << endl;
+            full = true;
+            vans.erase(vans.begin());
+        }
+    }
+}
+
+
+
+set<DeliveryVan>
+distributePackages(vector<DeliveryVan> &vans, vector<DeliveryPackage> &deliveryPackages, set<DeliveryVan> &res)  {
+    vector<pair<int, int>> auxVans; // vector with the weight and volume of each van, the values will decrease according to the packages
+
+    auxVans.reserve(vans.size());
+    for (auto van: vans) {
+        auxVans.emplace_back(van.getMaxWeight(), van.getMaxVolume());
+    }
+
+    res.insert(vans[0]);
+    for (auto package: deliveryPackages) {
+        if (vans[0].getMaxWeight() >= package.getPackageWeight() && vans[0].getMaxVolume() >= package.getPackageVolume()) {
+            vans[0].setMaxWeight(vans[0].getMaxWeight() - package.getPackageWeight());// if the package can fit inside the van then we decrease the respective values by the weight and volume of the package
+            vans[0].setMaxVolume(vans[0].getMaxVolume() - package.getPackageVolume());
+            /*
+            auxVans[i].first -= package.getPackageWeight();
+            auxVans[i].second -= package.getPackageVolume();
+
+            break;
+        }
+        else{
+            vans.erase(vans.begin());
+            res.insert(distributePackages(vans, deliveryPackages, res));
+        }
+        /*
+        for (size_t i = 0; i < auxVans.size(); i++) {
+            if (auxVans[i].first >= package.getPackageWeight() && auxVans[i].second >= package.getPackageVolume()) {
+                // if the package can fit inside the van then we decrease the respective values by the weight and volume of the package
+                if (find(res.begin(), res.end(), vans[i]) == res.end()) {
+                    res.push_back(vans[i]); // if the DeliveryVan is not found then we add it to the res vector
+                }
+                auxVans[i].first -= package.getPackageWeight();
+                auxVans[i].second -= package.getPackageVolume();
+                break;
+            }
+        }
+
+    }
+    return res;
+}
+*/
 
 /*
 vector<DeliveryVan> distributePackages(const vector<DeliveryVan> &vans, const vector<DeliveryPackage> &deliveryPackages) {
