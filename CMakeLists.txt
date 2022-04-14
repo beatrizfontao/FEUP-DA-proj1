@@ -1,6 +1,6 @@
-cmake_minimum_required(VERSION 3.21)
+cmake_minimum_required(VERSION 3.20.2)
 project(proj1)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(proj1 main.cpp src/DeliveryPackage.cpp src/DeliveryPackage.h src/Courier.cpp src/Courier.h)
+add_executable(proj1 main.cpp src/DeliveryPackage.cpp src/DeliveryPackage.h src/Courier.cpp src/Courier.h src/Express.cpp src/Express.h)

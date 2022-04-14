@@ -6,10 +6,9 @@
 			[
 				{
 					"build" : ".",
-					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
 					"minimumCMakeVersion" : 
 					{
-						"string" : "3.21"
+						"string" : "3.20.2"
 					},
 					"projectIndex" : 0,
 					"source" : ".",
@@ -39,7 +38,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "proj1::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-proj1-Debug-54a6df45025557e4a099.json",
+					"jsonFile" : "target-proj1-Debug-31059073509168a6b25d.json",
 					"name" : "proj1",
 					"projectIndex" : 0
 				}
@@ -49,12 +48,12 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/Beatriz Fontão/Desktop/FEUP/2_ano/DA/FEUP-DA-proj1/cmake-build-debug",
-		"source" : "C:/Users/Beatriz Fontão/Desktop/FEUP/2_ano/DA/FEUP-DA-proj1"
+		"build" : "C:/Users/Alexandre/Desktop/FEUP-DA-proj1/cmake-build-debug",
+		"source" : "C:/Users/Alexandre/Desktop/FEUP-DA-proj1"
 	},
 	"version" : 
 	{
 		"major" : 2,
-		"minor" : 3
+		"minor" : 2
 	}
 }

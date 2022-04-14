@@ -1,8 +1,10 @@
 #include <iostream>
 #include <vector>
 #include <fstream>
+#include <numeric>
 #include "src\Courier.h"
 #include "src\DeliveryPackage.h"
+#include "src/Express.h"
 
 using namespace std;
 
@@ -74,5 +76,13 @@ int main() {
         cout << "DURAÇÃO : " << d[i].getDeliveryTime() << endl;
         cout << "\n----------------------------------\n" ;
     }
+
+    Express express;
+    vector<DeliveryPackage> expressDelivery = express.expressOrder(d);
+    double sumTime;
+    for(auto x: expressDelivery){
+        sumTime += x.getDeliveryTime();
+    }
+    cout << sumTime/expressDelivery.size() << endl;
     return 0;
 }
