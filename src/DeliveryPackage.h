@@ -11,11 +11,10 @@ private:
     int packageVolume;
     int value;
     int deliveryTime;
-    bool used;
 
 public:
     DeliveryPackage();
-    DeliveryPackage(int packageWeight, int packageVolume, int value, int deliveryTime, bool used = false);
+    DeliveryPackage(int packageWeight, int packageVolume, int value, int deliveryTime);
 
     int getPackageWeight() const;
     void setPackageWeight(const int packageWeight);
@@ -28,8 +27,6 @@ public:
 
     int getDeliveryTime() const;
     void setDeliveryTime(const int deliveryTime);
-
-    bool operator<(const DeliveryPackage& deliveryPackage) const;
 };
 
 

@@ -24,7 +24,7 @@ public:
     int getDeliveryCost() const;
     void setDeliveryCost(const int deliveryCost);
 
-    bool operator<(const DeliveryVan& deliveryVan) const;
+    bool operator==(const DeliveryVan& deliveryVan) const;
 };
 
 
