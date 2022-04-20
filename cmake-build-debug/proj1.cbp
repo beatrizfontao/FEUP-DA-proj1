@@ -107,16 +107,13 @@
 		<Unit filename="C:/Users/rita_/OneDrive/Documentos/DA/FEUP-DA-proj1/src/DeliveryVan.h">
 			<Option target="proj1"/>
 		</Unit>
-		<Unit filename="C:/Users/rita_/OneDrive/Documentos/DA/FEUP-DA-proj1/src/Express.cpp">
+		<Unit filename="C:/Users/rita_/OneDrive/Documentos/DA/FEUP-DA-proj1/src/Problem2.cpp">
 			<Option target="proj1"/>
 		</Unit>
-		<Unit filename="C:/Users/rita_/OneDrive/Documentos/DA/FEUP-DA-proj1/src/Express.h">
+		<Unit filename="C:/Users/rita_/OneDrive/Documentos/DA/FEUP-DA-proj1/src/Problem3.cpp">
 			<Option target="proj1"/>
 		</Unit>
-		<Unit filename="C:/Users/rita_/OneDrive/Documentos/DA/FEUP-DA-proj1/src/problem2.cpp">
-			<Option target="proj1"/>
-		</Unit>
-		<Unit filename="C:/Users/rita_/OneDrive/Documentos/DA/FEUP-DA-proj1/src/problem2.h">
+		<Unit filename="C:/Users/rita_/OneDrive/Documentos/DA/FEUP-DA-proj1/src/Problems.h">
 			<Option target="proj1"/>
 		</Unit>
 		<Unit filename="C:/Users/rita_/OneDrive/Documentos/DA/FEUP-DA-proj1/CMakeLists.txt">

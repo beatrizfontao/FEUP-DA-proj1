@@ -1,6 +1,6 @@
-#include "problem2.h"
+#include "Problems.h"
 
-pair<vector<DeliveryVan>, int> fill(const vector<DeliveryVan> &vans, const vector<DeliveryPackage> &packages) {
+pair<vector<DeliveryVan>, int> maximizeProfit(const vector<DeliveryVan> &vans, const vector<DeliveryPackage> &packages, int &totalCost) {
     vector<DeliveryVan> deliveryVans = vans, res;
     vector<DeliveryPackage> deliveryPackages = packages;
 
@@ -28,9 +28,10 @@ pair<vector<DeliveryVan>, int> fill(const vector<DeliveryVan> &vans, const vecto
                 sort(deliveryPackages.begin(), deliveryPackages.end(), sortPackagesByVolume);
                 sortedByWeight = false;
             }
-            full = placePackage(deliveryPackages, deliveryVans, res, auxVans, vanNr, reward);
+            full = placePackage(deliveryPackages, deliveryVans, res, auxVans, vanNr, reward, totalCost);
         }
     }
+    drawAuxVans(auxVans);
     return make_pair(res, reward);
 }
 
@@ -52,10 +53,6 @@ bool sortVansByCost(DeliveryVan A, DeliveryVan B) {
     return A.getDeliveryCost() < B.getDeliveryCost();
 }
 
-bool sortVansByWeiVol(DeliveryVan A, DeliveryVan B) {
-    return A.getMaxWeight() > B.getMaxWeight() && A.getMaxVolume() > B.getMaxVolume();
-}
-
 void setAuxVans(vector<pair<int, int>> &auxVans, vector<DeliveryVan> &deliveryVans) {
     auxVans.reserve(deliveryVans.size());
     for (const auto van: deliveryVans) {
@@ -64,7 +61,7 @@ void setAuxVans(vector<pair<int, int>> &auxVans, vector<DeliveryVan> &deliveryVa
 }
 
 bool placePackage(vector<DeliveryPackage> &deliveryPackages, vector<DeliveryVan> &deliveryVans, vector<DeliveryVan> &res,
-             vector<pair<int, int>> &auxVans, int vanNr, int &reward) {
+             vector<pair<int, int>> &auxVans, int vanNr, int &reward, int &cost) {
     bool full = true;
     auto it = deliveryPackages.begin();
     while (it != deliveryPackages.end()) {
@@ -74,8 +71,8 @@ bool placePackage(vector<DeliveryPackage> &deliveryPackages, vector<DeliveryVan>
         }
         if (it->getPackageWeight() <= auxVans[vanNr].first && it->getPackageVolume() <= auxVans[vanNr].second) {
             if (find(res.begin(), res.end(), deliveryVans[vanNr]) == res.end()) {
-                res.emplace_back(
-                        deliveryVans[vanNr]); // if the DeliveryVan is not found then we add it to the res vector
+                res.emplace_back(deliveryVans[vanNr]); // if the van is not found then we add it to the res vector
+                cost += deliveryVans[vanNr].getDeliveryCost();
             }
             auxVans[vanNr].first -= it->getPackageWeight();
             auxVans[vanNr].second -= it->getPackageVolume();
@@ -88,3 +85,24 @@ bool placePackage(vector<DeliveryPackage> &deliveryPackages, vector<DeliveryVan>
     return full;
 }
 
+void drawMaxProfit(const vector<DeliveryVan> &vans, const vector<DeliveryPackage> &packages){
+    cout << "-----------------------------PROBLEM 2-----------------------------\n";
+    cout << "                            MAX PROFIT\n\n";
+
+    int totalCost = 0;
+
+    pair<vector<DeliveryVan>, int> maxProfit = maximizeProfit(vans, packages, totalCost);
+
+    cout << "Numero de carrinhas necessarias: " << maxProfit.first.size() << "\n";
+    cout << "Custo total = " << totalCost << "\n";
+    cout << "Recompensa = " << maxProfit.second << "\n";
+    cout << "Lucro = " << maxProfit.second - totalCost << "\n\n";
+}
+
+void drawAuxVans(vector<pair<int,int>> auxVans){
+    for(int i = 0; i < auxVans.size(); i++){
+        cout << "Carrinha " << i << ":\n";
+        cout << "Peso restante: " << auxVans[i].first << "u.m.\n";
+        cout << "Volume restante: " << auxVans[i].second << "u.v.\n\n";
+    }
+}

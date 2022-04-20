@@ -3,15 +3,11 @@
 #include <fstream>
 #include "src\DeliveryVan.h"
 #include "src\DeliveryPackage.h"
-#include "src/Express.h"
-#include "src\problem2.h"
-
-#include <numeric>
-
+#include "src\Problems.h"
 
 using namespace std;
 
-vector<DeliveryVan> readCourier(string filename){
+vector<DeliveryVan> readVans(string filename){
     vector<DeliveryVan> res = {};
     ifstream ifile(filename);
     DeliveryVan c;
@@ -62,27 +58,29 @@ vector<DeliveryPackage> readDeliveryPackage(string filename){
 
 
 int main() {
-    vector<DeliveryVan> c = readCourier("carrinhas.txt");
-    vector<DeliveryPackage> d = readDeliveryPackage("encomendas.txt");
-    pair<vector<DeliveryVan>, int> maxProfit = fill(c, d);
+    vector<DeliveryVan> vans = readVans("carrinhas.txt");
+    vector<DeliveryPackage> packages = readDeliveryPackage("encomendas.txt");
 
-    int totalCost = 0;
-
-    cout << "-----------------------------PROBLEM 2-----------------------------\n";
-    cout << "                            MAX PROFIT\n";
-
-    for(auto van : maxProfit.first){
-        cout << "Weight: " << van.getMaxWeight() << "\n";
-        cout << "Volume: " << van.getMaxVolume() << "\n";
-        cout << "Cost: " << van.getDeliveryCost() << "\n";
-        cout << "-----------------------------------------\n" << endl;
-        totalCost += van.getDeliveryCost();
+    while(true) {
+        cout << "TRABALHO DE DA" << endl << endl;
+        cout << "1) Problema 1" << endl << "2) Problema 2" << endl << "3) Problema 3" << endl << "0) Sair" <<endl << "Opcao:" << endl;
+        int option;
+        cin >> option;
+        switch (option) {
+            case 1:
+                //Problema 1
+                break;
+            case 2:
+                drawMaxProfit(vans,packages);
+                break;
+            case 3:
+                drawExpress(packages);
+                break;
+            case 0:
+                return 0;
+            default:
+                cout << "Por favor escolha uma opção válida" << endl << endl;
+                break;
+        }
     }
-
-    cout << "Number of delivery vans needed : " << maxProfit.first.size() << "\n";
-    cout << "Total cost : " << totalCost << "\n";
-    cout << "Reward: " << maxProfit.second << "\n";
-    cout << "Profit: " << maxProfit.second - totalCost << "\n\n";
-
-    return 0;
 }

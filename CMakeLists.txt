@@ -3,7 +3,7 @@ project(proj1)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(proj1 main.cpp src/DeliveryPackage.cpp src/DeliveryPackage.h src/DeliveryVan.cpp src/DeliveryVan.h src/problem2.cpp src/problem2.h src/Express.cpp src/Express.h)
+add_executable(proj1 main.cpp src/DeliveryPackage.cpp src/DeliveryPackage.h src/DeliveryVan.cpp src/DeliveryVan.h src/Problem2.cpp src/Problems.h src/Problem3.cpp)
 
 # Doxygen Build
 find_package(Doxygen)
