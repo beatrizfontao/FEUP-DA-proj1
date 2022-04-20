@@ -91,51 +91,66 @@ CMakeFiles/proj1.dir/src/DeliveryPackage.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/proj1.dir/src/DeliveryPackage.cpp.s"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Alexandre\Desktop\FEUP-DA-proj1\src\DeliveryPackage.cpp -o CMakeFiles\proj1.dir\src\DeliveryPackage.cpp.s
 
-CMakeFiles/proj1.dir/src/Courier.cpp.obj: CMakeFiles/proj1.dir/flags.make
-CMakeFiles/proj1.dir/src/Courier.cpp.obj: ../src/Courier.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Alexandre\Desktop\FEUP-DA-proj1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/proj1.dir/src/Courier.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\proj1.dir\src\Courier.cpp.obj -c C:\Users\Alexandre\Desktop\FEUP-DA-proj1\src\Courier.cpp
+CMakeFiles/proj1.dir/src/DeliveryVan.cpp.obj: CMakeFiles/proj1.dir/flags.make
+CMakeFiles/proj1.dir/src/DeliveryVan.cpp.obj: ../src/DeliveryVan.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Alexandre\Desktop\FEUP-DA-proj1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/proj1.dir/src/DeliveryVan.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\proj1.dir\src\DeliveryVan.cpp.obj -c C:\Users\Alexandre\Desktop\FEUP-DA-proj1\src\DeliveryVan.cpp
 
-CMakeFiles/proj1.dir/src/Courier.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/proj1.dir/src/Courier.cpp.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Alexandre\Desktop\FEUP-DA-proj1\src\Courier.cpp > CMakeFiles\proj1.dir\src\Courier.cpp.i
+CMakeFiles/proj1.dir/src/DeliveryVan.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/proj1.dir/src/DeliveryVan.cpp.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Alexandre\Desktop\FEUP-DA-proj1\src\DeliveryVan.cpp > CMakeFiles\proj1.dir\src\DeliveryVan.cpp.i
 
-CMakeFiles/proj1.dir/src/Courier.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/proj1.dir/src/Courier.cpp.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Alexandre\Desktop\FEUP-DA-proj1\src\Courier.cpp -o CMakeFiles\proj1.dir\src\Courier.cpp.s
+CMakeFiles/proj1.dir/src/DeliveryVan.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/proj1.dir/src/DeliveryVan.cpp.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Alexandre\Desktop\FEUP-DA-proj1\src\DeliveryVan.cpp -o CMakeFiles\proj1.dir\src\DeliveryVan.cpp.s
 
-CMakeFiles/proj1.dir/src/Express.cpp.obj: CMakeFiles/proj1.dir/flags.make
-CMakeFiles/proj1.dir/src/Express.cpp.obj: ../src/Express.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Alexandre\Desktop\FEUP-DA-proj1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/proj1.dir/src/Express.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\proj1.dir\src\Express.cpp.obj -c C:\Users\Alexandre\Desktop\FEUP-DA-proj1\src\Express.cpp
+CMakeFiles/proj1.dir/src/Problem2.cpp.obj: CMakeFiles/proj1.dir/flags.make
+CMakeFiles/proj1.dir/src/Problem2.cpp.obj: ../src/Problem2.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Alexandre\Desktop\FEUP-DA-proj1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/proj1.dir/src/Problem2.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\proj1.dir\src\Problem2.cpp.obj -c C:\Users\Alexandre\Desktop\FEUP-DA-proj1\src\Problem2.cpp
 
-CMakeFiles/proj1.dir/src/Express.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/proj1.dir/src/Express.cpp.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Alexandre\Desktop\FEUP-DA-proj1\src\Express.cpp > CMakeFiles\proj1.dir\src\Express.cpp.i
+CMakeFiles/proj1.dir/src/Problem2.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/proj1.dir/src/Problem2.cpp.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Alexandre\Desktop\FEUP-DA-proj1\src\Problem2.cpp > CMakeFiles\proj1.dir\src\Problem2.cpp.i
 
-CMakeFiles/proj1.dir/src/Express.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/proj1.dir/src/Express.cpp.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Alexandre\Desktop\FEUP-DA-proj1\src\Express.cpp -o CMakeFiles\proj1.dir\src\Express.cpp.s
+CMakeFiles/proj1.dir/src/Problem2.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/proj1.dir/src/Problem2.cpp.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Alexandre\Desktop\FEUP-DA-proj1\src\Problem2.cpp -o CMakeFiles\proj1.dir\src\Problem2.cpp.s
+
+CMakeFiles/proj1.dir/src/Problem3.cpp.obj: CMakeFiles/proj1.dir/flags.make
+CMakeFiles/proj1.dir/src/Problem3.cpp.obj: ../src/Problem3.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Alexandre\Desktop\FEUP-DA-proj1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/proj1.dir/src/Problem3.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\proj1.dir\src\Problem3.cpp.obj -c C:\Users\Alexandre\Desktop\FEUP-DA-proj1\src\Problem3.cpp
+
+CMakeFiles/proj1.dir/src/Problem3.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/proj1.dir/src/Problem3.cpp.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Alexandre\Desktop\FEUP-DA-proj1\src\Problem3.cpp > CMakeFiles\proj1.dir\src\Problem3.cpp.i
+
+CMakeFiles/proj1.dir/src/Problem3.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/proj1.dir/src/Problem3.cpp.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Alexandre\Desktop\FEUP-DA-proj1\src\Problem3.cpp -o CMakeFiles\proj1.dir\src\Problem3.cpp.s
 
 # Object files for target proj1
 proj1_OBJECTS = \
 "CMakeFiles/proj1.dir/main.cpp.obj" \
 "CMakeFiles/proj1.dir/src/DeliveryPackage.cpp.obj" \
-"CMakeFiles/proj1.dir/src/Courier.cpp.obj" \
-"CMakeFiles/proj1.dir/src/Express.cpp.obj"
+"CMakeFiles/proj1.dir/src/DeliveryVan.cpp.obj" \
+"CMakeFiles/proj1.dir/src/Problem2.cpp.obj" \
+"CMakeFiles/proj1.dir/src/Problem3.cpp.obj"
 
 # External object files for target proj1
 proj1_EXTERNAL_OBJECTS =
 
 proj1.exe: CMakeFiles/proj1.dir/main.cpp.obj
 proj1.exe: CMakeFiles/proj1.dir/src/DeliveryPackage.cpp.obj
-proj1.exe: CMakeFiles/proj1.dir/src/Courier.cpp.obj
-proj1.exe: CMakeFiles/proj1.dir/src/Express.cpp.obj
+proj1.exe: CMakeFiles/proj1.dir/src/DeliveryVan.cpp.obj
+proj1.exe: CMakeFiles/proj1.dir/src/Problem2.cpp.obj
+proj1.exe: CMakeFiles/proj1.dir/src/Problem3.cpp.obj
 proj1.exe: CMakeFiles/proj1.dir/build.make
 proj1.exe: CMakeFiles/proj1.dir/linklibs.rsp
 proj1.exe: CMakeFiles/proj1.dir/objects1.rsp
 proj1.exe: CMakeFiles/proj1.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Alexandre\Desktop\FEUP-DA-proj1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable proj1.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Alexandre\Desktop\FEUP-DA-proj1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable proj1.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\proj1.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

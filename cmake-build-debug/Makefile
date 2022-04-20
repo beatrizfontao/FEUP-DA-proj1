@@ -128,6 +128,19 @@ proj1/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\proj1.dir\build.make CMakeFiles/proj1.dir/build
 .PHONY : proj1/fast
 
+#=============================================================================
+# Target rules for targets named Doxygen
+
+# Build rule for target.
+Doxygen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Doxygen
+.PHONY : Doxygen
+
+# fast build rule for target.
+Doxygen/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Doxygen.dir\build.make CMakeFiles/Doxygen.dir/build
+.PHONY : Doxygen/fast
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -151,30 +164,6 @@ main.s: main.cpp.s
 main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\proj1.dir\build.make CMakeFiles/proj1.dir/main.cpp.s
 .PHONY : main.cpp.s
-
-src/Courier.obj: src/Courier.cpp.obj
-.PHONY : src/Courier.obj
-
-# target to build an object file
-src/Courier.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\proj1.dir\build.make CMakeFiles/proj1.dir/src/Courier.cpp.obj
-.PHONY : src/Courier.cpp.obj
-
-src/Courier.i: src/Courier.cpp.i
-.PHONY : src/Courier.i
-
-# target to preprocess a source file
-src/Courier.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\proj1.dir\build.make CMakeFiles/proj1.dir/src/Courier.cpp.i
-.PHONY : src/Courier.cpp.i
-
-src/Courier.s: src/Courier.cpp.s
-.PHONY : src/Courier.s
-
-# target to generate assembly for a file
-src/Courier.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\proj1.dir\build.make CMakeFiles/proj1.dir/src/Courier.cpp.s
-.PHONY : src/Courier.cpp.s
 
 src/DeliveryPackage.obj: src/DeliveryPackage.cpp.obj
 .PHONY : src/DeliveryPackage.obj
@@ -200,29 +189,77 @@ src/DeliveryPackage.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\proj1.dir\build.make CMakeFiles/proj1.dir/src/DeliveryPackage.cpp.s
 .PHONY : src/DeliveryPackage.cpp.s
 
-src/Express.obj: src/Express.cpp.obj
-.PHONY : src/Express.obj
+src/DeliveryVan.obj: src/DeliveryVan.cpp.obj
+.PHONY : src/DeliveryVan.obj
 
 # target to build an object file
-src/Express.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\proj1.dir\build.make CMakeFiles/proj1.dir/src/Express.cpp.obj
-.PHONY : src/Express.cpp.obj
+src/DeliveryVan.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\proj1.dir\build.make CMakeFiles/proj1.dir/src/DeliveryVan.cpp.obj
+.PHONY : src/DeliveryVan.cpp.obj
 
-src/Express.i: src/Express.cpp.i
-.PHONY : src/Express.i
+src/DeliveryVan.i: src/DeliveryVan.cpp.i
+.PHONY : src/DeliveryVan.i
 
 # target to preprocess a source file
-src/Express.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\proj1.dir\build.make CMakeFiles/proj1.dir/src/Express.cpp.i
-.PHONY : src/Express.cpp.i
+src/DeliveryVan.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\proj1.dir\build.make CMakeFiles/proj1.dir/src/DeliveryVan.cpp.i
+.PHONY : src/DeliveryVan.cpp.i
 
-src/Express.s: src/Express.cpp.s
-.PHONY : src/Express.s
+src/DeliveryVan.s: src/DeliveryVan.cpp.s
+.PHONY : src/DeliveryVan.s
 
 # target to generate assembly for a file
-src/Express.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\proj1.dir\build.make CMakeFiles/proj1.dir/src/Express.cpp.s
-.PHONY : src/Express.cpp.s
+src/DeliveryVan.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\proj1.dir\build.make CMakeFiles/proj1.dir/src/DeliveryVan.cpp.s
+.PHONY : src/DeliveryVan.cpp.s
+
+src/Problem2.obj: src/Problem2.cpp.obj
+.PHONY : src/Problem2.obj
+
+# target to build an object file
+src/Problem2.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\proj1.dir\build.make CMakeFiles/proj1.dir/src/Problem2.cpp.obj
+.PHONY : src/Problem2.cpp.obj
+
+src/Problem2.i: src/Problem2.cpp.i
+.PHONY : src/Problem2.i
+
+# target to preprocess a source file
+src/Problem2.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\proj1.dir\build.make CMakeFiles/proj1.dir/src/Problem2.cpp.i
+.PHONY : src/Problem2.cpp.i
+
+src/Problem2.s: src/Problem2.cpp.s
+.PHONY : src/Problem2.s
+
+# target to generate assembly for a file
+src/Problem2.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\proj1.dir\build.make CMakeFiles/proj1.dir/src/Problem2.cpp.s
+.PHONY : src/Problem2.cpp.s
+
+src/Problem3.obj: src/Problem3.cpp.obj
+.PHONY : src/Problem3.obj
+
+# target to build an object file
+src/Problem3.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\proj1.dir\build.make CMakeFiles/proj1.dir/src/Problem3.cpp.obj
+.PHONY : src/Problem3.cpp.obj
+
+src/Problem3.i: src/Problem3.cpp.i
+.PHONY : src/Problem3.i
+
+# target to preprocess a source file
+src/Problem3.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\proj1.dir\build.make CMakeFiles/proj1.dir/src/Problem3.cpp.i
+.PHONY : src/Problem3.cpp.i
+
+src/Problem3.s: src/Problem3.cpp.s
+.PHONY : src/Problem3.s
+
+# target to generate assembly for a file
+src/Problem3.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\proj1.dir\build.make CMakeFiles/proj1.dir/src/Problem3.cpp.s
+.PHONY : src/Problem3.cpp.s
 
 # Help Target
 help:
@@ -232,19 +269,23 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... Doxygen
 	@echo ... proj1
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
-	@echo ... src/Courier.obj
-	@echo ... src/Courier.i
-	@echo ... src/Courier.s
 	@echo ... src/DeliveryPackage.obj
 	@echo ... src/DeliveryPackage.i
 	@echo ... src/DeliveryPackage.s
-	@echo ... src/Express.obj
-	@echo ... src/Express.i
-	@echo ... src/Express.s
+	@echo ... src/DeliveryVan.obj
+	@echo ... src/DeliveryVan.i
+	@echo ... src/DeliveryVan.s
+	@echo ... src/Problem2.obj
+	@echo ... src/Problem2.i
+	@echo ... src/Problem2.s
+	@echo ... src/Problem3.obj
+	@echo ... src/Problem3.i
+	@echo ... src/Problem3.s
 .PHONY : help
 
 
