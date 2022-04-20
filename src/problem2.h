@@ -16,8 +16,12 @@ pair<vector<DeliveryVan>, int> fill(const vector<DeliveryVan> &vans, const vecto
 bool placePackage(vector<DeliveryPackage> &deliveryPackages, vector<DeliveryVan> &deliveryVans, vector<DeliveryVan> &res,
              vector<pair<int, int>> &auxVans, int vanNr, int &reward);
 
-void sortPackagesByWeight(vector<DeliveryPackage> &deliveryPackages);
+bool sortPackagesByWeight(DeliveryPackage A, DeliveryPackage B);
 
-void sortPackagesByVolume(vector<DeliveryPackage> &deliveryPackages);
+bool sortPackagesByVolume(DeliveryPackage A, DeliveryPackage B);
+
+bool sortVansByCost(DeliveryVan A, DeliveryVan B);
+
+void setAuxVans(vector<pair<int, int>> &auxVans, vector<DeliveryVan> &deliveryVans);
 
 #endif //PROJ1_PROBLEM2_H
