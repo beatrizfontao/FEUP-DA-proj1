@@ -61,28 +61,27 @@ vector<DeliveryPackage> readDeliveryPackage(string filename){
 int main() {
     vector<Courier> c = readCourier("carrinhas.txt");
     vector<DeliveryPackage> d = readDeliveryPackage("encomendas.txt");
-    cout << "CARRINHAS" << endl;
-    for(int i = 0; i < c.size(); i++){
-        cout << "VOLMAX : " << c[i].getMaxVolume() << endl;
-        cout << "PESOMAX : " << c[i].getMaxWeight() << endl;
-        cout << "CUSTO : " << c[i].getDeliveryCost() << endl;
-        cout << "\n----------------------------------\n" ;
+    while(true) {
+        cout << "TRABALHO DE DA" << endl << endl;
+        cout << "1) Problema 1" << endl << "2) Problema 2" << endl << "3) Problema 3" << endl << "0) Sair" <<endl << "Opcao:" << endl;
+        int option;
+        cin >> option;
+        Express express;
+        switch (option) {
+            case 1:
+                //Problema 1
+                break;
+            case 2:
+                //Problema 2
+                break;
+            case 3:
+                express.drawExpress(d);
+                break;
+            case 0:
+                return 0;
+            default:
+                cout << "Opção não existe" << endl << endl;
+                break;
+        }
     }
-    cout << '\n' << "ENCOMENDAS" << endl;
-    for(int i = 0; i < d.size(); i++){
-        cout << "VOLUME : " << d[i].getPackageVolume() << endl;
-        cout << "PESO : " << d[i].getPackageWeight() << endl;
-        cout << "RECOMPENSA : " << d[i].getValue() << endl;
-        cout << "DURAÇÃO : " << d[i].getDeliveryTime() << endl;
-        cout << "\n----------------------------------\n" ;
-    }
-
-    Express express;
-    vector<DeliveryPackage> expressDelivery = express.expressOrder(d);
-    double sumTime;
-    for(auto x: expressDelivery){
-        sumTime += x.getDeliveryTime();
-    }
-    cout << sumTime/expressDelivery.size() << endl;
-    return 0;
 }

@@ -24,3 +24,12 @@ vector<DeliveryPackage> Express::expressOrder(vector<DeliveryPackage> d) {
 bool Express::comparison(DeliveryPackage a, DeliveryPackage b) {
     return a.getDeliveryTime() > b.getDeliveryTime();
 }
+
+void Express::drawExpress(vector<DeliveryPackage> d) {
+    vector<DeliveryPackage> expressDelivery = expressOrder(d);
+    double sumTime = 0;
+    for(auto x: expressDelivery){
+        sumTime += x.getDeliveryTime();
+    }
+    cout << "Media do tempo por encomenda(em segundos):" << sumTime/expressDelivery.size() << endl << endl;
+}

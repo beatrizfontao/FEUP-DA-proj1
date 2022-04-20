@@ -6,22 +6,6 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/Alexandre/Desktop/FEUP-DA-proj1/main.cpp
-iostream
--
-vector
--
-fstream
--
-numeric
--
-src/Courier.h
-C:/Users/Alexandre/Desktop/FEUP-DA-proj1/src/Courier.h
-src/DeliveryPackage.h
-C:/Users/Alexandre/Desktop/FEUP-DA-proj1/src/DeliveryPackage.h
-src/Express.h
-C:/Users/Alexandre/Desktop/FEUP-DA-proj1/src/Express.h
-
 C:/Users/Alexandre/Desktop/FEUP-DA-proj1/src/Courier.h
 iostream
 -

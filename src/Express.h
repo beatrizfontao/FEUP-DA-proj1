@@ -8,6 +8,8 @@
 class Express {
 public:
     Express();
+    void drawExpress(vector<DeliveryPackage> d);
+private:
     vector<DeliveryPackage> expressOrder(vector<DeliveryPackage> d);
     static bool comparison(DeliveryPackage a, DeliveryPackage b);
 };
