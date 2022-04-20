@@ -3,7 +3,11 @@
 #include <fstream>
 #include "src\DeliveryVan.h"
 #include "src\DeliveryPackage.h"
+#include "src/Express.h"
 #include "src\problem2.h"
+
+#include <numeric>
+
 
 using namespace std;
 
