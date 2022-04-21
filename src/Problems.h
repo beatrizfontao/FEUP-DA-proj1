@@ -13,10 +13,10 @@ using namespace std;
 void setAuxVans(vector<pair<int, int>> &auxVans, vector<DeliveryVan> &deliveryVans);
 
 //Cenário 2
-pair<vector<DeliveryVan>, int> maximizeProfit(const vector<DeliveryVan> &vans, const vector<DeliveryPackage> &packages, int &totalCost);
+vector<DeliveryVan> maximizeProfit(const vector<DeliveryVan> &vans, const vector<DeliveryPackage> &packages, int &totalCost, int &reward);
 
-bool placePackage(vector<DeliveryPackage> &deliveryPackages, vector<DeliveryVan> &deliveryVans, vector<DeliveryVan> &res,
-             vector<pair<int, int>> &auxVans, int vanNr, int &reward, int &totalCost);
+bool placePackage(vector<DeliveryPackage> &searchPackages, vector<DeliveryPackage> &auxPackages, vector<DeliveryVan> &deliveryVans, vector<DeliveryVan> &res,
+                  vector<pair<int, int>> &auxVans, int vanNr, int &reward, int &totalCost);
 
 bool sortPackagesByWeight(DeliveryPackage A, DeliveryPackage B);
 

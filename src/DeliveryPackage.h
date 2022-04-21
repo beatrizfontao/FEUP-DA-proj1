@@ -7,6 +7,7 @@ using namespace std;
 
 class DeliveryPackage {
 private:
+    int id;
     int packageWeight;
     int packageVolume;
     int value;
@@ -14,7 +15,7 @@ private:
 
 public:
     DeliveryPackage();
-    DeliveryPackage(int packageWeight, int packageVolume, int value, int deliveryTime);
+    DeliveryPackage(int packageWeight, int packageVolume, int value, int deliveryTime, int id);
 
     int getPackageWeight() const;
     void setPackageWeight(const int packageWeight);
@@ -27,6 +28,9 @@ public:
 
     int getDeliveryTime() const;
     void setDeliveryTime(const int deliveryTime);
+
+    int getId() const;
+    void setId(const int id);
 };
 
 

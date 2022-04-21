@@ -46,7 +46,9 @@ vector<DeliveryPackage> readDeliveryPackage(string filename){
             d.setPackageWeight(peso);
             d.setValue(recompensa);
             d.setDeliveryTime(duracao);
+            d.setId(cnt);
             res.push_back(d);
+            cnt++;
         }
     }
     else {

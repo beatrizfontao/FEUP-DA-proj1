@@ -5,11 +5,12 @@ DeliveryPackage::DeliveryPackage() {
 }
 
 DeliveryPackage::DeliveryPackage(int packageWeight, int packageVolume, int value,
-                                 int deliveryTime) {
+                                 int deliveryTime, int id) {
     this->packageWeight = packageWeight;
     this->packageVolume = packageVolume;
     this->value = value;
     this->deliveryTime = deliveryTime;
+    this->id = id;
 }
 
 int DeliveryPackage::getPackageWeight() const {
@@ -42,4 +43,12 @@ int DeliveryPackage::getDeliveryTime() const {
 
 void DeliveryPackage::setDeliveryTime(const int deliveryTime) {
     this->deliveryTime = deliveryTime;
+}
+
+int DeliveryPackage::getId() const {
+    return this->id;
+}
+
+void DeliveryPackage::setId(const int id) {
+    this->id = id;
 }
