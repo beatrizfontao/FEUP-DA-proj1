@@ -30,10 +30,10 @@ void drawAuxVans(vector<pair<int,int>> auxVans);
 
 //Cenário 3
 
-vector<DeliveryPackage> expressOrder(vector<DeliveryPackage> d);
+vector<DeliveryPackage> expressOrder(vector<DeliveryPackage> packages);
 
 static bool sortByTime(DeliveryPackage A, DeliveryPackage B);
 
-void drawExpress(vector<DeliveryPackage> d);
+void drawExpress (vector<DeliveryPackage> packages);
 
 #endif //PROJ1_PROBLEMS_H
