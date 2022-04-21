@@ -41,8 +41,6 @@ vector<DeliveryVan> maximizeProfit(const vector<DeliveryVan> &vans, const vector
             }
         }
     }
-
-    //drawAuxVans(auxVans);
     return res;
 }
 
