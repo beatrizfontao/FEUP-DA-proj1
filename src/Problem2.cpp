@@ -1,5 +1,7 @@
 #include "Problems.h"
 
+#define MULTIPLIER 15 /** multiplier for ...*/
+
 /**
  * Fills each van one by one according to the smaller variable at each moment (weight and volume) in a way that maximizes the profit
  * Time Complexity: O(??)
@@ -112,7 +114,7 @@ bool placePackage(vector<DeliveryPackage> &searchPackages, vector<DeliveryPackag
     bool full = true;
     auto it = searchPackages.begin();
     while (it != searchPackages.end()) {
-        if (it->getValue() < 591) {
+        if (it->getValue() < (it->getPackageVolume()+it->getPackageWeight())*MULTIPLIER) {
             it = searchPackages.erase(it);
             continue;
         }
