@@ -10,19 +10,23 @@ private:
     int maxVolume;
     int maxWeight;
     int deliveryCost;
+    int vanId;
 
 public:
     DeliveryVan();
     DeliveryVan(int maxVolume, int maxWeight, int deliveryCost);
 
     int getMaxVolume() const;
-    void setMaxVolume(const int maxVolume);
+    void setMaxVolume(int maxVolume);
 
     int getMaxWeight() const;
-    void setMaxWeight(const int maxWeight);
+    void setMaxWeight(int maxWeight);
 
     int getDeliveryCost() const;
-    void setDeliveryCost(const int deliveryCost);
+    void setDeliveryCost(int deliveryCost);
+
+    int getVanId() const;
+    void setVanId(int vanId);
 
     bool operator==(const DeliveryVan& deliveryVan) const;
 };

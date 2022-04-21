@@ -12,6 +12,27 @@ using namespace std;
 
 void setAuxVans(vector<pair<int, int>> &auxVans, vector<DeliveryVan> &deliveryVans);
 
+//Cenário 1
+
+vector<DeliveryVan> deliveryVanMinimization(const vector<DeliveryVan>& vans, const vector<DeliveryPackage>& packages);
+
+bool deliveryVanSort(const DeliveryVan &a, const DeliveryVan &b);
+
+bool deliveryPackageSort(const DeliveryPackage &a, const DeliveryPackage &b);
+
+vector<DeliveryVan> distributePackages(vector<DeliveryVan>& vans, vector<DeliveryPackage>& packages);
+
+void drawMinimizationOfVans(vector<DeliveryVan>deliveryVans, vector <DeliveryPackage> deliveryPackages);
+
+//----------------------------------------------------------------------------------------------------------------------
+
+vector<DeliveryVan> minimizeVans(const vector<DeliveryVan> &vans, const vector<DeliveryPackage> &packages);
+
+bool place_Package(vector<DeliveryPackage> &deliveryPackages, vector<DeliveryVan> &deliveryVans, vector<DeliveryVan> &res,
+                   vector<pair<int, int>> &auxVans, int vanNr);
+
+void drawMinimizationOfVans_2nd(vector<DeliveryVan>deliveryVans, vector <DeliveryPackage> deliveryPackages);
+
 //Cenário 2
 vector<DeliveryVan> maximizeProfit(const vector<DeliveryVan> &vans, const vector<DeliveryPackage> &packages, int &totalCost, int &reward);
 

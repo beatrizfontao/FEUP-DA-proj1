@@ -8,6 +8,7 @@
 using namespace std;
 
 vector<DeliveryVan> readVans(string filename){
+    int Id = 0;
     vector<DeliveryVan> res = {};
     ifstream ifile(filename);
     DeliveryVan c;
@@ -20,7 +21,9 @@ vector<DeliveryVan> readVans(string filename){
             c.setMaxVolume(volMax);
             c.setMaxWeight(pesoMax);
             c.setDeliveryCost(custo);
+            c.setVanId(Id);
             res.push_back(c);
+            Id ++;
         }
     }
     else {
@@ -70,7 +73,8 @@ int main() {
         cin >> option;
         switch (option) {
             case 1:
-                //Problema 1
+                drawMinimizationOfVans(vans, packages);
+                drawMinimizationOfVans_2nd(vans, packages);
                 break;
             case 2:
                 drawMaxProfit(vans,packages);
