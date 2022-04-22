@@ -1,4 +1,0 @@
-C:/Users/rita_/OneDrive/Documentos/DA/FEUP-DA-proj1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-C:/Users/rita_/OneDrive/Documentos/DA/FEUP-DA-proj1/cmake-build-debug/CMakeFiles/proj1.dir
-C:/Users/rita_/OneDrive/Documentos/DA/FEUP-DA-proj1/cmake-build-debug/CMakeFiles/Doxygen.dir
-C:/Users/rita_/OneDrive/Documentos/DA/FEUP-DA-proj1/cmake-build-debug/CMakeFiles/edit_cache.dir

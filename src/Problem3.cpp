@@ -1,5 +1,7 @@
 #include "Problems.h"
 
+#define HOURS_OF_WORK(n) (n*60*60) /** Converts the number of hours of work to seconds*/
+
 /**
  * Chooses the express deliveries in a way that reduces the average time of each delivery
  * Time Complexity: O(nlog(n))
@@ -12,7 +14,7 @@ vector<DeliveryPackage> expressOrder(vector<DeliveryPackage> packages) {
     vector<DeliveryPackage> res;
     int totalTime = 0;
     int deliveryInd = 0;
-    while(totalTime + packages[deliveryInd].getDeliveryTime() <= 28800){
+    while(totalTime + packages[deliveryInd].getDeliveryTime() <= HOURS_OF_WORK(8)){
         totalTime += packages[deliveryInd].getDeliveryTime();
         res.push_back(packages[deliveryInd]);
         deliveryInd++;
@@ -43,5 +45,6 @@ void drawExpress(vector<DeliveryPackage> packages) {
         sumTime = expressDelivery[i].getDeliveryTime() + temp;
         temp = sumTime;
     }
-    cout << "Media de tempo por encomenda(em segundos):" << sumTime/expressDelivery.size() << endl << endl;
+    cout << "Numero de entregas: " << expressDelivery.size() << "\n";
+    cout << "Media de tempo por encomenda(em segundos):" << sumTime/expressDelivery.size() << "\n\n";
 }
