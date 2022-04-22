@@ -4,7 +4,7 @@
 
 /**
  * Fills each van one by one according to the smaller variable at each moment (weight and volume) in a way that maximizes the profit
- * Time Complexity: O(??)
+ * Time Complexity: O(n^2 logn)
  * @param vans vector with all the vans
  * @param packages vector with all the packages
  * @param totalCost sum of the cost of all the vans being used
